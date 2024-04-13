@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employees</title>
-    <link rel="stylesheet" href="employees.css">
+    <title>Update</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -65,10 +64,8 @@
 <body>
     <div id="div1">
         <h1 class="tittle" th:text="'UPDATE EMPLOYEE ' + ${employeeId} + ''"></h1>
-
         <form th:action="@{/update/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar al empleado?')">
             <input type="hidden" name="employeeId" th:value="${employeeId}" />
-
             <div class="inputs">
                 <div class="xd">
                     <label for="firstName">First Name:</label>
@@ -80,7 +77,6 @@
                     <input type="text" id="lastName" name="lastName" required><br>
                 </div>
             </div>
-
             <button type="submit">Actualizar Empleado</button>
         </form>
     </div>
