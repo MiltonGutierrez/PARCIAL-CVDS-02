@@ -12,7 +12,7 @@ import jakarta.persistence.Persistence;
 public class Employee {
     @Id
     @Column(name = "EMPLOYEE_ID")
-    private String employeeId;
+    private Integer employeeId;
 
     @Column(name = "FIRST_NAME")
     private String firstName;
@@ -45,7 +45,7 @@ public class Employee {
      * @param role
      * @param salary
      */
-    public Employee(String employeeId, String firstName, String lastName, String role, double salary){
+    public Employee(Integer employeeId, String firstName, String lastName, String role, double salary){
         this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -53,11 +53,11 @@ public class Employee {
         this.salary = salary;
     }
 
-    public void setEmployeeId(String employeeId){
+    public void setEmployeeId(Integer employeeId){
         this.employeeId = employeeId;
     }
 
-    public String getEmployeeId(){
+    public Integer getEmployeeId(){
         return employeeId;
     }
 
@@ -73,7 +73,7 @@ public class Employee {
         this.lastName = lastName;
     }
 
-    public String getLasttName(){
+    public String getLastName(){
         return lastName;
     }
 
