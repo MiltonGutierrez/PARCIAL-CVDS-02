@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Employees</title>
-    <link rel="stylesheet" href="../static/employees.css">
+    <title>Products</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -63,39 +62,52 @@
         button:hover {
             background-color: #0056b3;
         }
+
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin-right: 10px;
+        }
     </style>
 </head>
 <body>
     <div id="div1">
-        <h1 class="tittle">EMPLOYEES LIST</h1>
+        <h1 class="tittle">Products List</h1>
 
         <table>
             <thead>
-                <tr id="employeeTable">
+                <tr id="productTable">
                     <th>ID</th>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>Role</th>
-                    <th>Salary</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>category</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Action</th>
+                    <th>Action</th>
                 </tr>
             </thead>
         
             <tbody>
-                <tr th:each="employee: ${list}" class="filas">
-                    <td th:text="${employee.employeeId}"></td>
-                    <td th:text="${employee.firstName}"></td>
-                    <td th:text="${employee.lastName}"></td>
-                    <td th:text="${employee.role}"></td>
-                    <td th:text="${employee.salary}"></td>
+                <tr th:each="product: ${list}" class="filas">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.description}"></td>
+                    <td th:text="${product.category}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.quantity}"></td>
 
                     <td> 
-                        <form th:="@{/delete/confirm(employeeId=${employee.employeeId})}" method="post" onsubmit="return confirm('¿Desea eliminar al empleado?')">
+                        <form th:action="@{/delete/confirm(id=${product.id})}" method="post" onsubmit="return confirm('¿Desea eliminar al producto?')">
                             <button type="submit">DELETE</button> 
                         </form>
                     </td>
 
                     <td> 
-                        <form th:="@{/update(employeeId=${employee.employeeId})}" method="post">
+                        <form th:action="@{/update(id=${product.id})}" method="post">
                             <button type="submit">UPDATE</button> 
                         </form>
                     </td>
@@ -103,8 +115,14 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div class="button-container">
         <form action="/new" method="get">
             <button type="submit">NEW</button>
+        </form>
+        <form action="/consulta" method="get">
+            <button type="submit">VIEW</button>
         </form>
     </div>
 </body>

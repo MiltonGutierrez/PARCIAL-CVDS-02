@@ -50,24 +50,30 @@
 <body>
 <div class="container">
     <h2>Crear Usuario</h2>
-    <form th:action="@{/new/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea crear un empleado?')">
+    <form th:action="@{/new/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea crear un producto?')">
 
-        <label for="employeeId">"EMPLOYEE ID"</label>
-        <input type="text" id="employeeId" name="employeeId" required>
+        <label for="id">ID</label>
+        <input type="text" id="id" name="id" required>
 
-        <label for="firstName">FIRST NAME:</label>
-        <input type="text" id="firstName" name="firstName" required>
+        <label for="name"> NAME</label>
+        <input type="text" id="name" name="name" required>
 
-        <label for="lastName">LAST NAME</label>
-        <input type="text" id="lastName" name="lastName" required>
+        <label for="description">DESCRIPTION</label>
+        <input type="text" id="description" name="description" required>
 
-        <label for="role">ROLE</label>
-        <input type="text" id="role" name="role" required>
+        <label for="category">CATEGORY</label>
+        <input type="text" id="category" name="category" required>
 
-        <label for="salary">SALARY:</label>
-        <input type="text" id="salary" name="salary" required>
+        <label for="rating">RATING</label>
+        <input type="text" id="rating" name="rating" required>
+
+        <label for="price">PRICE</label>
+        <input type="text" id="price" name="price" required>
+
+        <label for="quantity">QUANTITY:</label>
+        <input type="text" id="quantity" name="quantity" required>
     
-        <input type="submit" value="Crear empleado">
+        <input type="submit" value="Crear product">
     </form>
 </div>
 </body>
