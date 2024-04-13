@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employees</title>
+    <link rel="stylesheet" href="employees.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .tittle {
+            text-align: center;
+            color: #007bff;
+        }
+
+        .inputs {
+            margin-top: 20px;
+        }
+
+        .xd {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h1 class="tittle" th:text="'UPDATE EMPLOYEE ' + ${employeeId} + ''"></h1>
+
+        <form th:action="@{/update/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar al empleado?')">
+            <input type="hidden" name="employeeId" th:value="${employeeId}" />
+
+            <div class="inputs">
+                <div class="xd">
+                    <label for="firstName">First Name:</label>
+                    <input type="text" id="firstName" name="firstName" required><br>
+                </div>
+
+                <div class="xd">
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" id="lastName" name="lastName" required><br>
+                </div>
+            </div>
+
+            <button type="submit">Actualizar Empleado</button>
+        </form>
+    </div>
+</body>
+</html>
