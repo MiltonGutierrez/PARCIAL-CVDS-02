@@ -21,7 +21,7 @@ public class Product {
     private String description;
 
     @Column(name = "CATEGORY")
-    private Category role;
+    private Category category;
 
     @Column(name = "RATING", columnDefinition = "TINYINT(1)")
     private Short rating;
@@ -35,7 +35,7 @@ public class Product {
     /*@Override
     public String toString() {
         return "Employee [employeeId=" + employeeId + ", firstName=" + firstName +
-                ", lastName=" + lastName + ", role=" + role + ", salary =" + salary + "]";
+                ", lastName=" + lastName + ", category=" + category + ", salary =" + salary + "]";
     }*/
 
     /**
@@ -43,11 +43,11 @@ public class Product {
      */
     public Product(){}
 
-    public Product(Integer id, String name, String description, Category role, Integer price, Integer quantity){
+    public Product(Integer id, String name, String description, String category, Integer price, Integer quantity){
         this.id = id;
         this.name = name;
         this.description = description;
-        this.role = role;
+        this.category = Category.valueOf(category);
         this.price = price;
         this.quantity = quantity;
     }
@@ -76,12 +76,12 @@ public class Product {
         return description;
     }
 
-    public void setRole(Category role){
-        this.role = role;
+    public void setCategory(String category){
+        this.category = Category.valueOf(category);
     }
 
-    public Category getRole(){
-        return role;
+    public Category getCategory(){
+        return category;
     }
 
     public void setRating(Short rating){

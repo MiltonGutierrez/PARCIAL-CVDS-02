@@ -63,21 +63,48 @@
 </head>
 <body>
     <div id="div1">
-        <h1 class="tittle" th:text="'UPDATE EMPLOYEE ' + ${employeeId} + ''"></h1>
-        <form th:action="@{/update/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar al empleado?')">
-            <input type="hidden" name="employeeId" th:value="${employeeId}" />
+        <h1 class="tittle" th:text="'UPDATE product ' + ${id} + ''"></h1>
+        <form th:action="@{/update/confirm}" method="post" onsubmit="return confirm('¿Está seguro de que desea actualizar al update?')">
+            <input type="hidden" name="id" th:value="${id}" />
             <div class="inputs">
+
                 <div class="xd">
-                    <label for="firstName">First Name:</label>
-                    <input type="text" id="firstName" name="firstName" required><br>
+                    <label for="id">ID</label>
+                    <input type="text" id="id" name="id" required><br>
                 </div>
 
                 <div class="xd">
-                    <label for="lastName">Last Name:</label>
-                    <input type="text" id="lastName" name="lastName" required><br>
+                    <label for="name">NAME</label>
+                    <input type="text" id="name" name="name" required><br>
                 </div>
+
+                <div class="xd">
+                    <label for="description">DESCRIPTION</label>
+                    <input type="text" id="description" name="description" required><br>
+                </div>
+
+                <div class="xd">
+                    <label for="category">CATEGORY</label>
+                    <input type="text" id="category" name="category" required><br>
+                </div>
+
+                <div class="xd">
+                    <label for="rating">RATING</label>
+                    <input type="text" id="rating" name="rating" required><br>
+                </div>
+
+                <div class="xd">
+                    <label for="price">PRICE</label>
+                    <input type="text" id="price" name="price" required><br>
+                </div>
+
+                <div class="xd">
+                    <label for="quantity">QUANTITY</label>
+                    <input type="text" id="quantity" name="quantity" required><br>
+                </div>
+
             </div>
-            <button type="submit">Actualizar Empleado</button>
+            <button type="submit">Actualizar Producto</button>
         </form>
     </div>
 </body>
