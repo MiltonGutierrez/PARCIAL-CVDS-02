@@ -9,9 +9,8 @@
 <img width="140" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/9df565e5-dd4f-4932-b655-49de6a7c78ea">
 ![image](https://github.com/jhonSsosa/CVDS_LAB07/blob/main/images/Employee.PNG)
 - Cree una interfaz CRUD para esa entidad usando los conocimientos adquiridos en React
-
 <img width="672" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/67f8763f-920d-4c26-a7e7-cfcbee8cd37c">
-![image](https://github.com/jhonSsosa/CVDS_LAB07/blob/main/images/Employee.png)
+
 <img width="675" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/8030b6b1-741f-4460-92ce-b66156c9857b">
 
 <img width="675" alt="image" src="https://github.com/PDSW-ECI/labs/assets/4140058/652744e8-f2be-496d-9a57-6e72cb652c7f">
